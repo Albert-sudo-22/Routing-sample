@@ -1,2 +1,15 @@
 <h3>CRISIS CENTER</h3>
 <p>Get your crisis here</p>
+
+<div class="card-container">
+    <div class="card" *ngFor="let user of users">
+      <img [src]="user.image" alt="{{ user.firstName }}" class="card-img">
+      <h2>{{ user.firstName }} {{ user.lastName }}</h2>
+      <p><strong>Age:</strong> {{ user.age }}</p>
+      <p><strong>Email:</strong> {{ user.email }}</p>
+      <p><strong>Phone:</strong> {{ user.phone }}</p>
+      <p><strong>Company:</strong> {{ user.company?.name }}</p>
+      <p><strong>Role:</strong> {{ user.role }}</p>
+    </div>
+  </div>
+  

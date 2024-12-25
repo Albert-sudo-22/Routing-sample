@@ -6,8 +6,11 @@ import { HeroesDetailComponent } from './heroes-detail/heroes-detail.component';
 
 export const routes: Routes = [
     {path: 'crisis-list', component: CrisisListComponent},
-    {path: 'heroes-list', component: HeroesListComponent},
-    {path: '', redirectTo: '/heroes-list', pathMatch: 'full'},
+    {
+        path: 'heroes-list',
+        loadChildren: () => import('./heroes.module').then(m => m.HeroesModule),
+      },
+    {path: '', redirectTo: '/crisis-list', pathMatch: 'full'},
     {path: 'hero/:id', component: HeroesDetailComponent },
     {path: '**', component: PageNotFoundComponent},
 ];

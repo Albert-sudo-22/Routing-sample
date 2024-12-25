@@ -2,31 +2,13 @@
 <p>Get your heroes here</p>
 
 <div class="card-container">
-    <div class="card">
-      <div class="card-header">Card Title 1</div>
-      <div class="card-content">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.
-      </div>
-      <div class="card-footer">
-        <button>Learn More</button>
-      </div>
+  <div class="card" *ngFor="let hero of heroes">
+    <div class="card-header">{{ hero.name }}</div>
+    <div class="card-content">
+      <p><strong>Power:</strong> {{ hero.power }}</p>
     </div>
-    <div class="card">
-      <div class="card-header">Card Title 2</div>
-      <div class="card-content">
-        Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Donec rutrum congue leo eget malesuada.
-      </div>
-      <div class="card-footer">
-        <button>Learn More</button>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header">Card Title 3</div>
-      <div class="card-content">
-        Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Sed porttitor lectus nibh.
-      </div>
-      <div class="card-footer">
-        <button>Learn More</button>
-      </div>
+    <div class="card-footer">
+      <button (click)="showHeroDetails(hero.id)">Learn More</button> <!-- Pass hero.id -->
     </div>
   </div>
+</div>

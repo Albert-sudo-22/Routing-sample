@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 export class HeroesDetailComponent implements OnInit {
   hero: any;
 
-  constructor(private route: ActivatedRoute, private router: Router) {} // Inject Router
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
     const heroId = Number(this.route.snapshot.paramMap.get('id'));
@@ -20,6 +20,6 @@ export class HeroesDetailComponent implements OnInit {
   }
 
   goBackToHeroes(): void {
-    this.router.navigate(['/heroes-list']); // Navigate back to heroes list
+    this.router.navigate(['/heroes-list']);
   }
 }

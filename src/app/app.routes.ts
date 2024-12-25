@@ -8,6 +8,6 @@ export const routes: Routes = [
     {path: 'crisis-list', component: CrisisListComponent},
     {path: 'heroes-list', component: HeroesListComponent},
     {path: '', redirectTo: '/heroes-list', pathMatch: 'full'},
-    { path: 'hero/:id', component: HeroesDetailComponent }, // Route with ID parameter
+    {path: 'hero/:id', component: HeroesDetailComponent },
     {path: '**', component: PageNotFoundComponent},
 ];
